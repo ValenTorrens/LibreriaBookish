@@ -9,7 +9,7 @@ app.use(cors());
 const productos = [
     {
         id: "libro1",
-        cover: "../client/assets/libro1.webp",
+        cover: "./client/assets/libro1.webp",
         alt: "Portada libro fourth wing de Rebecca Yarros",
         title: "fourth wing",
         writer: "rebecca yarros",
@@ -18,7 +18,7 @@ const productos = [
     },
     {
         id: "libro2",
-        cover: "../client/assets/libro2.webp",
+        cover: "./client/assets/libro2.webp",
         alt: "Portada libro Me Before You de Jojo Moyes",
         title: "Me Before You",
         writer: "Jojo Moyes",
@@ -27,7 +27,7 @@ const productos = [
     },
     {
         id: "libro3",
-        cover: "../client/assets/libro3.webp",
+        cover: "./client/assets/libro3.webp",
         alt: "Portada libro Three-Inch Teeth de C.J. Box",
         title: "three-inch teeth",
         writer: "C.J. Box",
@@ -36,7 +36,7 @@ const productos = [
     },
     {
         id: "libro4",
-        cover: "../client/assets/libro4.webp",
+        cover: "./client/assets/libro4.webp",
         alt: "Portada libro It Ends with Us de Colleen Hoover",
         title: "It Ends with Us",
         writer: "Colleen Hoover",
@@ -45,7 +45,7 @@ const productos = [
     },
     {
         id: "libro5",
-        cover: "../client/assets/libro5.webp",
+        cover: "./client/assets/libro5.webp",
         alt: "Portada libro It de Stephen King",
         title: "It",
         writer: "Stephen King",
@@ -54,7 +54,7 @@ const productos = [
     },
     {
         id: "libro6",
-        cover: "../client/assets/libro6.webp",
+        cover: "./client/assets/libro6.webp",
         alt: "Portada libro From Blood and Ash de Jennifer L. Armentrout",
         title: "From Blood and Ash",
         writer: "Jennifer L. Armentrout",
@@ -63,7 +63,7 @@ const productos = [
     },
     {
         id: "libro7",
-        cover: "../client/assets/libro7.webp",
+        cover: "./client/assets/libro7.webp",
         alt: "Portada libro White Out de Danielle Girard",
         title: "White Out",
         writer: "Danielle Girard",
@@ -72,7 +72,7 @@ const productos = [
     },
     {
         id: "libro8",
-        cover: "../client/assets/libro8.webp",
+        cover: "./client/assets/libro8.webp",
         alt: "Portada libro The Cruel Prince de Holly Black",
         title: "The Cruel Prince",
         writer: "Holly Black",
@@ -81,7 +81,7 @@ const productos = [
     },
     {
         id: "libro9",
-        cover: "../client/assets/libro9.webp",
+        cover: "./client/assets/libro9.webp",
         alt: "Portada libro Girl, Alone de Blake Pierce",
         title: "Girl, Alone",
         writer: "Blake Pierce",
@@ -90,7 +90,7 @@ const productos = [
     },
     {
         id: "libro10",
-        cover: "../client/assets/libro10.webp",
+        cover: "./client/assets/libro10.webp",
         alt: "Portada libro Think of a Number de John Verdon",
         title: "Think of a Number",
         writer: "John Verdon",
@@ -99,7 +99,7 @@ const productos = [
     },
     {
         id: "libro11",
-        cover: "../client/assets/libro11.webp",
+        cover: "./client/assets/libro11.webp",
         alt: "Portada libro A Game of Thrones de George R.R. Martin",
         title: "A Game of Thrones",
         writer: "George R.R. Martin",
@@ -108,7 +108,7 @@ const productos = [
     },
     {
         id: "libro12",
-        cover: "../client/assets/libro12.webp",
+        cover: "./client/assets/libro12.webp",
         alt: "Portada libro Pride And Prejudice de Jane Austen",
         title: "Pride And Prejudice",
         writer: "Jane Austen",
@@ -117,7 +117,7 @@ const productos = [
     },
     {
         id: "libro13",
-        cover: "../client/assets/libro13.webp",
+        cover: "./client/assets/libro13.webp",
         alt: "Portada libro Crave de Tracy Wolff",
         title: "Crave",
         writer: "Tracy Wolff",
@@ -126,7 +126,7 @@ const productos = [
     },
     {
         id: "libro14",
-        cover: "../client/assets/libro14.webp",
+        cover: "./client/assets/libro14.webp",
         alt: "Portada libro Stray Witch de Eva Alton",
         title: "Stray Witch",
         writer: "Eva Alton",
@@ -135,7 +135,7 @@ const productos = [
     },
     {
         id: "libro15",
-        cover: "../client/assets/libro15.webp",
+        cover: "./client/assets/libro15.webp",
         alt: "Portada libro Un cuento perfecto de Elísabet Benavent",
         title: "Un cuento perfecto",
         writer: "Elísabet Benavent",
