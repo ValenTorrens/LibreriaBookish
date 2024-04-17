@@ -5,232 +5,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/d6a8dc03c9.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="client/css/style.css">
+    <link rel="stylesheet" href="./client/css/style.css">
     <title>Productos | Bookish | Librería online</title>
-
 </head>
 
 <body>
-    <header>
-        <div>
-            <h2>BOOKISH</h2>
-        </div>
-        <div class="navbar">
-            <button id="homeBtn">Inicio</button>
-            <button id="productsBtn">Productos</button>
-            <button id="cartBtn">Carrito</button>
-        </div>
+    <header class="site-header">
+        <h1 class="site-title">Bookish</h1>
+        <nav class="site-navigation">
+            <h2 class="navigation-title">Lista de Productos</h2>
+            <a href="./client/pages/cart.html"><i class="fa-solid fa-cart-shopping"><span>0</span></i></a>
+        </nav>
     </header>
-    <main class="content">
-
-        <section id="homePage" class="page">
-            <div class="headerHome">
-                <h1>Bienvenido a Bookish</h1>
-                <h2>Descubre aquí tu próxima aventura literaria</h2>
-            </div>
-
-            <div class="newBooks">
-                <h3> Nuevos Ingresos </h3>
-                <div class="newBooksSlides booksSlides" data-speed="fast">
-                    <div class="slidesBooks">
-                        <div class="cardBook"><img src="./client/assets/libro13.webp"
-                                alt="Portada libro Crave de Tracy Wolff" class="coverBook">
-                            <div class="detailsBook">
-                                <p class="titleBook">Crave</p>
-                                <p class="writerBook">Tracy Wolff</p>
-                                <p class="genreBook">#Fantasía</p>
-                            </div>
-                        </div>
-                        <div class="cardBook"><img src="./client/assets/libro3.webp"
-                                alt="Portada libro Three-Inch Teeth de C.J. Box" class="coverBook">
-                            <div class="detailsBook">
-                                <p class="titleBook">Three-inch Teeth</p>
-                                <p class="writerBook">C.J. Box</p>
-                                <p class="genreBook">#Policial</p>
-
-                            </div>
-                        </div>
-                        <div class="cardBook"><img src="./client/assets/libro7.webp"
-                                alt="Portada libro White Out de Danielle Girard" class="coverBook">
-                            <div class="detailsBook">
-                                <p class="titleBook">White Out</p>
-                                <p class="writerBook">Danielle Girard</p>
-                                <p class="genreBook">#Policial</p>
-
-                            </div>
-                        </div>
-                        <div class="cardBook"><img src="./client/assets/libro15.webp"
-                                alt="Portada libro Un cuento perfecto de Elísabet Benavent" class="coverBook">
-                            <div class="detailsBook">
-                                <p class="titleBook">Un cuento perfecto</p>
-                                <p class="writerBook">Elísabet Benavent</p>
-                                <p class="genreBook">#Romance</p>
-
-                            </div>
-                        </div>
-                        <div class="cardBook"><img src="./client/assets/libro9.webp"
-                                alt="Portada libro Girl, Alone de Blake Pierce" class="coverBook">
-                            <div class="detailsBook">
-                                <p class="titleBook">Girl, Alone</p>
-                                <p class="writerBook">Blake Pierce</p>
-                                <p class="genreBook">#Suspenso</p>
-
-                            </div>
-                        </div>
-                        <div class="cardBook"><img src="./client/assets/libro12.webp"
-                                alt="Portada libro Pride And Prejudice de Jane Austen" class="coverBook">
-                            <div class="detailsBook">
-                                <p class="titleBook">Pride And Prejudice</p>
-                                <p class="writerBook">Jane Austen</p>
-                                <p class="genreBook">#Romance Histórico</p>
-                            </div>
+    <main class="site-main">
+        <section class="product-section">
+            <!-- Template card productos -->
+            <template class="product-template">
+                <div class="product-card">
+                    <img class="product-cover">
+                    <div class="product-details">
+                        <h3 class="product-title"></h3>
+                        <p class="product-writer"></p>
+                        <p class="product-genre"></p>
+                        <div class="product-actions">
+                            <h4 class="product-price"></h4>
+                            <button class="btn-add-to-cart"></button>
                         </div>
                     </div>
                 </div>
-                <div><button class="seeProductsBtn">Ver Productos</button></div>
-                
-            </div>
-
-            <div class="bestSellers">
-                <h3> Más Vendidos </h3>
-                <div class="bestSellersSlides booksSlides" data-speed="fast">
-                    <div class="slidesBooks">
-                        <div class="cardBook"><img src="./client/assets/libro1.webp"
-                                alt="Portada libro fourth wing de Rebecca Yarros" class="coverBook">
-                            <div class="detailsBook">
-                                <p class="titleBook">Fourth Wing</p>
-                                <p class="writerBook">Rebecca Yarros</p>
-                                <p class="genreBook">#Fantasía</p>
-                                
-                            </div>
-                        </div>
-                        <div class="cardBook"><img src="./client/assets/libro6.webp"
-                                alt="Portada libro From Blood and Ash de Jennifer L. Armentrout" class="coverBook">
-                            <div class="detailsBook">
-                                <p class="titleBook">From Blood and Ash</p>
-                                <p class="writerBook">Jennifer L. Armentrout</p>
-                                <p class="genreBook">#Fantasía</p>
-                                
-                            </div>
-                        </div>
-                        <div class="cardBook"><img src="./client/assets/libro8.webp"
-                                alt="Portada libro The Cruel Prince de Holly Black" class="coverBook">
-                            <div class="detailsBook">
-                                <p class="titleBook">The Cruel Prince</p>
-                                <p class="writerBook">Holly Black</p>
-                                <p class="genreBook">#Fantasía</p>
-                            
-                            </div>
-                        </div>
-                        <div class="cardBook"><img src="./client/assets/libro10.webp"
-                                alt="Portada libro Think of a Number de John Verdon" class="coverBook">
-                            <div class="detailsBook">
-                                <p class="titleBook">Think of a Number</p>
-                                <p class="writerBook">John Verdon</p>
-                                <p class="genreBook">#Suspenso</p>
-                                
-                            </div>
-                        </div>
-                        <div class="cardBook"><img src="./client/assets/libro14.webp"
-                                alt="Portada libro Stray Witch de Eva Alton" class="coverBook">
-                            <div class="detailsBook">
-                                <p class="titleBook">Stray Witch</p>
-                                <p class="writerBook">Eva Alton</p>
-                                <p class="genreBook">#Fantasía</p>
-                                
-                            </div>
-                        </div>
-                        <div class="cardBook"><img src="./client/assets/libro4.webp"
-                                alt="Portada libro It Ends with Us de Colleen Hoover" class="coverBook">
-                            <div class="detailsBook">
-                                <p class="titleBook">It Ends with Us</p>
-                                <p class="writerBook">Colleen Hoover</p>
-                                <p class="genreBook">#Romance</p>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div><button class="seeProductsBtn">Ver Productos</button></div>
-                
-            </div>
-        </section>
-
-        <section id="productsPage" class="page">
-            <div class="headerProducts">
-                <h2>Lista de Productos</h2>
-                <i class="fa-solid fa-cart-shopping" aria-hidden="true"><span id="productCartCount">0</span></i>
-            </div>
-            <div id="productsContainer" class="containerProducts">
-
-            </div>
-        </section>
-
-        <section id="cartPage" class="page">
-            <div class="containerCart" style="display:block;">
-                <div class="headerCart">
-                    <h2>Tu Carrito</h2>
-                    <i class="fa-solid fa-cart-shopping" aria-hidden="true"><span id="cartCartCount">0</span></i>
-                </div>
-
-                <div class="containerTable">
-                    <table id="carritoTable" class="table">
-                        <thead>
-                            <tr>
-                                <th>Producto</th>
-                                <th>Cantidad</th>
-                                <th>Precio Unitario</th>
-                                <th>Subtotal</th>
-                                <th></th>
-                            </tr>
-                        </thead>
-                        <tbody id="carritoBody" class="tbody">
-                        </tbody>
-                    </table>
-                    <div class="containerTotal">
-                        <p id="itemCartTotal" class="total">Total: $ 0.00</p>
-                    </div>
-                </div>
-                <div class="cartActions">
-                    <div>
-                        <button id="emptyCartButton">Vaciar Carrito</button>
-                        <button id="keepBuyingBtn">Seguir comprando</button>
-                    </div>
-                    <button class="confirmCart">Confirmar compra</button>
-                </div>
-            </div>
-
-
-            <div class="containerCheckout">
-                <h2>Checkout</h2>
-                <form action="#" method="POST">
-                    <div class="personalInfo">
-                        <div class="form-group">
-                            <label for="name">Nombre y Apellido:</label>
-                            <input type="text" id="name" name="name" autocomplete="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Teléfono:</label>
-                            <input type="tel" id="phone" name="phone" pattern="\d{10,11}" maxlength="11" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email:</label>
-                            <input type="email" id="email" name="email" autocomplete="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="address">Dirección:</label>
-                            <input type="text" id="address" name="address" autocomplete="address-level3" required>
-                        </div>
-                    </div>
-                    <button type="submit">Confirmar Pago</button>
-                </form>
-            </div>
+            </template>
         </section>
     </main>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./client/js/main.js"></script>
-    <script src="./client/js/form.js"></script>
-    <script src="./client/js/products_and_cart.js"></script>
 </body>
 
 </html>

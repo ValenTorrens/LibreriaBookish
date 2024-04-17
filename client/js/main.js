@@ -1,45 +1,36 @@
-const $booksSlides = document.querySelectorAll(".booksSlides");
+(() => {
+    const $template = document.querySelector(".product-template").content,
+        $fragmnet = document.createDocumentFragment(),
+        $container = document.querySelector(".product-section");
 
+    async function getData() {
+        try { 
+            let res = await fetch('http://localhost:3000/productos'),
+            json = await (res.ok ? res.json() : Promise.reject(res));
 
-if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    addAnimation();
-}
+            json.forEach((el) => {
+                
+                $template.querySelector("img").setAttribute("src", el.cover);
+                $template.querySelector("img").setAttribute("alt", el.alt);
+                $template.querySelector("h3").textContent = `${el.title}`;
+                $template.querySelectorAll("p")[0].textContent = `${el.writer}`;
+                $template.querySelectorAll("p")[1].textContent = `${el.genre}`;
+                $template.querySelector("h4").textContent = `$ ${el.price}`;
+                $template.querySelector("button").textContent = "Comprar";
 
-function addAnimation() {
-    
-    $booksSlides.forEach((scroller) => {
-        
-        scroller.setAttribute("data-animated", true);
+                let $clone = document.importNode($template, true);
+                $fragmnet.appendChild($clone);
 
-        const $slidesBooks = scroller.querySelector(".slidesBooks"),
-            scrollerContent = Array.from($slidesBooks.children);
+            });
 
-    
-        scrollerContent.forEach((item) => {
-            const duplicatedItem = item.cloneNode(true);
-            duplicatedItem.setAttribute("aria-hidden", true);
-            $slidesBooks.appendChild(duplicatedItem);
-        });
-    });
-}
+            $container.appendChild($fragmnet);
 
+        } catch (err) {
+            console.log(err);
 
-document.addEventListener("DOMContentLoaded", function() {
-    const $homePage = document.getElementById("homePage"),
-        $productsPage = document.getElementById("productsPage"),
-        $seeProductsBtns = document.querySelectorAll(".seeProductsBtn"),
-        $header = document.querySelector('header');
-
-
-    function showProductsPage() {
-        $homePage.style.display = "none";
-        $productsPage.style.display = "block";
-
-        window.scrollTo(0, $header.offsetTop);
+        }
     }
 
-    
-    $seeProductsBtns.forEach(btn => {
-        btn.addEventListener("click", showProductsPage);
-    });
-});
+    getData();
+
+})();
