@@ -11,8 +11,8 @@ const productos = [
         id: "libro1",
         cover: "./client/assets/libro1.webp",
         alt: "Portada libro fourth wing de Rebecca Yarros",
-        title: "fourth wing",
-        writer: "rebecca yarros",
+        title: "Fourth Wing",
+        writer: "Rebecca Yarros",
         price: 42000,
         genre: "#Fantasía"
     },
@@ -29,7 +29,7 @@ const productos = [
         id: "libro3",
         cover: "./client/assets/libro3.webp",
         alt: "Portada libro Three-Inch Teeth de C.J. Box",
-        title: "three-inch teeth",
+        title: "Three-inch Teeth",
         writer: "C.J. Box",
         price: 17150,
         genre: "#Policial"
@@ -154,3 +154,4 @@ app.listen(PORT, () => {
 
     console.log(`Servidor escuchando en el puerto ${PORT}`);
 })
+
